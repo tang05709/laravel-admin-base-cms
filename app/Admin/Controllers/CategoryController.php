@@ -94,7 +94,7 @@ class CategoryController extends Controller
 
             $form->select('parent_id', trans('admin.parent_id'))->options(Category::selectOptions());
             $form->text('title', trans('admin.title'))->rules('required');
-            $form->select('module', 'Module')->options(['page' => 'Page', 'article' => 'Article', 'product' => 'Product', 'job' => 'Job']);
+            $form->select('module', 'Module')->options(['pages' => 'Page', 'articles' => 'Article', 'products' => 'Product', 'jobs' => 'Job']);
             $form->text('keywords', 'Keywords')->rules('nullable');
             $form->text('description', 'Description')->rules('nullable');
             $form->number('order', 'Order')->default(50);

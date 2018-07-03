@@ -16,7 +16,7 @@ class CreatePagesTable extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->integer('catgory_id');
+            $table->integer('category_id');
             $table->string('keywords')->nullable();
             $table->string('description')->nullable();
             $table->text('content');
