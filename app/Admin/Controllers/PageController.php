@@ -97,7 +97,7 @@ class PageController extends Controller
             $form->text('keywords', 'Keywords')->rules('nullable');
             $form->text('description', 'Description')->rules('nullable');
             $form->number('order', 'Order')->default(50);
-            $form->textarea('content', 'Content');
+            $form->wangeditor('content', 'Content');
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');

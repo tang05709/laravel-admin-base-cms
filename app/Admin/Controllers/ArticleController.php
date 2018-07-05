@@ -98,7 +98,7 @@ class ArticleController extends Controller
             $form->text('description', 'Description')->rules('nullable');
             $form->image('image', 'Image')->rules('mimes:gif,jpg,png');
             $form->number('order', 'Order')->default(50);
-            $form->textarea('content', 'Content');
+            $form->wangeditor('content', 'Content');
            
 
             $form->display('created_at', 'Created At');

@@ -99,7 +99,7 @@ class ProductController extends Controller
             $form->image('image', 'Image')->rules('mimes:gif,jpg,png');
             $form->multipleFile('gallery', 'Gallery')->rules('mimes:gif,jpg,png');
             $form->number('order', 'Order')->default(50);
-            $form->textarea('content', 'Content');
+            $form->wangeditor('content', 'Content');
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');

@@ -58,5 +58,6 @@ Route::group([
     $router->get('category/{id}', 'CategoryApiController@show');
     $router->get('children/{id}', 'CategoryApiController@children');
     $router->get('config', 'ConfigApiController@config');
+    $router->post('upimage', 'UploadApiController@upimage');
     
 });

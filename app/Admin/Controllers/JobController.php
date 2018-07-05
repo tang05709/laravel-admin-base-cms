@@ -97,7 +97,7 @@ class JobController extends Controller
             $form->number('number', 'Number')->default(1);
             $form->currency('salary', 'Salary')->default('面议');
             $form->number('order', 'Order')->default(50);
-            $form->textarea('content', 'Content');
+            $form->wangeditor('content', 'Content');
 
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');

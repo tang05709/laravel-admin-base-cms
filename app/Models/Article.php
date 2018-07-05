@@ -12,15 +12,4 @@ class Article extends Model
     {
         return $this->belongsTo(Category::class);
     }
-
-    /**
-     * 设置image
-     *
-     * @param  string  $value
-     * @return string
-     */
-    public function setImageAttribute($value)
-    {
-        $this->attributes['image'] = "uploads/" . $value;
-    }
 }
