@@ -75,6 +75,7 @@ class PageController extends Controller
         return Admin::grid(Page::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
+            $grid->title('Title');
 
             $grid->created_at();
             $grid->updated_at();
@@ -96,7 +97,6 @@ class PageController extends Controller
             $form->text('title', 'Title')->rules("required");
             $form->text('keywords', 'Keywords')->rules('nullable');
             $form->text('description', 'Description')->rules('nullable');
-            $form->number('order', 'Order')->default(50);
             $form->wangeditor('content', 'Content');
 
             $form->display('created_at', 'Created At');

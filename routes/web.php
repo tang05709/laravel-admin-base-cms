@@ -59,5 +59,6 @@ Route::group([
     $router->get('children/{id}', 'CategoryApiController@children');
     $router->get('config', 'ConfigApiController@config');
     $router->post('upimage', 'UploadApiController@upimage');
+    $router->get('advert/{advert_type}', 'AdvertApiController@index');
     
 });

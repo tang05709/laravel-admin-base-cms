@@ -75,6 +75,9 @@ class ArticleController extends Controller
         return Admin::grid(Article::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
+            $grid->title('Title');
+            $grid->order('Order')->sortable();
+            $grid->click('Click')->sortable();
 
             $grid->created_at();
             $grid->updated_at();
@@ -96,7 +99,8 @@ class ArticleController extends Controller
             $form->text('title', 'Title')->rules("required");
             $form->text('keywords', 'Keywords')->rules('nullable');
             $form->text('description', 'Description')->rules('nullable');
-            $form->image('image', 'Image')->rules('mimes:gif,jpg,png');
+            $form->image('image', 'Image')->rules('mimes:gif,jpg,png,jpeg');
+            $form->file('video', 'Video')->rules('mimes:avi,mp4');
             $form->number('order', 'Order')->default(50);
             $form->wangeditor('content', 'Content');
            

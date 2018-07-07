@@ -75,6 +75,9 @@ class CategoryController extends Controller
         return Admin::grid(Category::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
+            $grid->title('Title');
+            $grid->title('Order');
+            $grid->title('Click');
 
             $grid->created_at();
             $grid->updated_at();

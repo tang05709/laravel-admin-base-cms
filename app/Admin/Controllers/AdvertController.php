@@ -75,6 +75,7 @@ class AdvertController extends Controller
         return Admin::grid(Advert::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
+            $grid->advert_desc('Advert Name');
 
             $grid->created_at();
             $grid->updated_at();
@@ -96,7 +97,7 @@ class AdvertController extends Controller
             # 获取所有广告类型
             $form->select('advert_type_id', 'Advert Type')->options(AdvertType::pluck('advert_type_name', 'id'));
             $form->url('url', 'Url')->rules("required");
-            $form->image('image', 'Image')->rules('mimes:gif,jpg,png');
+            $form->image('image', 'Image')->rules('mimes:gif,jpg,png,jpeg');
             
 
             $form->display('created_at', 'Created At');

@@ -23,7 +23,8 @@
     "autoload": {
         "classmap": [
             "database/seeds",
-            "database/factories"
+            "database/factories",
+            "app/Libs"
         ],
         "psr-4": {
             "App\\": "app/"
@@ -31,7 +32,6 @@
         "files": [
             "app/Helpers/functions.php"
         ]
-    
     },
     "autoload-dev": {
         "psr-4": {
