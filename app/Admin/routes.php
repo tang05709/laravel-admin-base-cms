@@ -18,4 +18,5 @@ Route::group([
     $router->resource('product', 'ProductController');
     $router->resource('job', 'JobController');
     $router->resource('page', 'PageController');
+    $router->resource('config', 'ConfigController');
 });

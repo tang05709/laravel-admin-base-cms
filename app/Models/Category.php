@@ -31,4 +31,9 @@ class Category extends Model
     {
         return $this->hasMany(Page::class);
     }
+
+    public function pictures()
+    {
+        return $this->hasMany(Picture::class);
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Picture;
 use App\Models\Category;
 
 use Encore\Admin\Form;
@@ -10,9 +11,8 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
-use Encore\Admin\Tree;
 
-class CategoryController extends Controller
+class PictureController extends Controller
 {
     use ModelForm;
 
@@ -25,10 +25,10 @@ class CategoryController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('树状模型');
+            $content->header('header');
             $content->description('description');
 
-            $content->body(Category::tree());
+            $content->body($this->grid());
         });
     }
 
@@ -72,12 +72,12 @@ class CategoryController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(Category::class, function (Grid $grid) {
+        return Admin::grid(Picture::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
             $grid->title('Title');
-            $grid->title('Order');
-            $grid->title('Click');
+            $grid->order('Order')->sortable();
+            $grid->click('Click')->sortable();
 
             $grid->created_at();
             $grid->updated_at();
@@ -91,19 +91,21 @@ class CategoryController extends Controller
      */
     protected function form()
     {
+        return Admin::form(Picture::class, function (Form $form) {
 
-        return Category::form(function (Form $form) {
             $form->display('id', 'ID');
 
-            $form->select('parent_id', trans('admin.parent_id'))->options(Category::selectOptions());
-            $form->text('title', trans('admin.title'))->rules('required');
-            $form->select('module', 'Module')->options(['pages' => 'Page', 'articles' => 'Article', 'products' => 'Product', 'pictures' => 'Picture', 'jobs' => 'Job']);
+            $form->select('category_id', 'Category')->options(Category::selectOptions());
+            $form->text('title', 'Title')->rules("required");
             $form->text('keywords', 'Keywords')->rules('nullable');
             $form->text('description', 'Description')->rules('nullable');
+            $form->image('image', 'Image')->rules('mimes:gif,jpg,png,jpeg');
+            $form->multipleFile('gallery', 'Gallery')->rules('mimes:gif,jpg,png,jpeg');
             $form->number('order', 'Order')->default(50);
+            $form->wangeditor('content', 'Content');
 
-            $form->display('created_at', trans('admin.created_at'));
-            $form->display('updated_at', trans('admin.updated_at'));
+            $form->display('created_at', 'Created At');
+            $form->display('updated_at', 'Updated At');
         });
     }
 }

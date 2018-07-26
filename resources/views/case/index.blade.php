@@ -88,34 +88,47 @@
             </div>
         </div>
         <div class="col-lg-9 col-md-9 main-content">
-            <div class="content-menu">
-                <a href="">首页</a> &gt; <a href="">新闻中心</a>  &gt; 公司新闻
-            </div>
-            <div class="articles-list">
+            <div class="cases-list">
             <ul>
-                <li class="row">
-                    <div class="col-sm-3 img">
-                        <a href="#"><img src="{{ URL::asset('/') }}images/jianzhu-1370.jpg" /></a>
-                    </div>
-                    <div class="col-sm-9 info">
-                        <a href="#">教你选择大理石教你选择大理石教你选择大理石教你选择大理石</a>
-                        <p><i class="fa fa-clock-o"></i> 2018-08-28</p>
-                    </div>
+               <li>
+                    <a href="#">
+                        <figure class="case-img cover"><img src="{{ URL::asset('/') }}images/jianzhu-1370.jpg" /></figure>
+                        <p class="title"><i class="fa fa-chevron-right"></i>人造板</p>
+                        <p>教你选择大理石</p>
+                    </a>
                 </li>
-                <li class="row">
-                    <div class="col-sm-3 img">
-                        <a href="#"><img src="{{ URL::asset('/') }}images/jianzhu-1370.jpg" /></a>
-                    </div>
-                    <div class="col-sm-9 info">
-                        <a href="#">教你选择大理石教你选择大理石教你选择大理石教你选择大理石</a>
-                        <p><i class="fa fa-clock-o"></i> 2018-08-28</p>
-                    </div>
+                <li>
+                    <a href="#">
+                        <figure class="case-img cover"><img src="{{ URL::asset('/') }}images/jianzhu-1370.jpg" /></figure>
+                        <p class="title"><i class="fa fa-chevron-right"></i>人造板</p>
+                        <p>教你选择大理石</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure class="case-img cover"><img src="{{ URL::asset('/') }}images/jianzhu-1370.jpg" /></figure>
+                        <p class="title"><i class="fa fa-chevron-right"></i>人造板</p>
+                        <p>教你选择大理石</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure class="case-img cover"><img src="{{ URL::asset('/') }}images/jianzhu-1370.jpg" /></figure>
+                        <p class="title"><i class="fa fa-chevron-right"></i>人造板</p>
+                        <p>教你选择大理石</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure class="case-img cover"><img src="{{ URL::asset('/') }}images/jianzhu-1370.jpg" /></figure>
+                        <p class="title"><i class="fa fa-chevron-right"></i>人造板</p>
+                        <p>教你选择大理石</p>
+                    </a>
                 </li>
             </ul>
             </div>
             <div class="page">
             <ul class="pagination">
-                <li class="info"><span>共 5 页 20条记录</span></li>
                 <li><a href="#">首 页</a></li>
                 <li><a href="#">上一页</a></li>
                 <li><a href="#">下一页</a></li>

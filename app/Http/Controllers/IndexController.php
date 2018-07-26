@@ -11,7 +11,7 @@ class IndexController extends Controller
     }
 
     public function index() {
-        
+        return view('index.index');
     }
 
     public function articles() {
@@ -27,6 +27,14 @@ class IndexController extends Controller
     }
 
     public function product() {
+        
+    }
+
+    public function cases() {
+        return view('case.index');
+    }
+
+    public function case() {
         
     }
 

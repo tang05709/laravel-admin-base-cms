@@ -22,25 +22,11 @@ Route::get('articles/{category?}', 'IndexController@articles');
 Route::get('article/{id}', 'IndexController@article');
 Route::get('products/{category?}', 'IndexController@products');
 Route::get('product/{id}', 'IndexController@product');
+Route::get('cases/{category?}', 'IndexController@cases');
+Route::get('case/{id}', 'IndexController@case');
 Route::get('jobs/{category?}', 'IndexController@jobs');
 Route::get('job/{id}', 'IndexController@job');
 Route::get('pages/{category?}', 'IndexController@page');
-
-Route::group([
-    'prefix'        => 'mobile',
-    'namespace'     => "Mobile",
-], function (Router $router) {
-
-    $router->get('/', 'IndexController@index');
-    $router->get('articles/{category?}', 'IndexController@articles');
-    $router->get('article/{id}', 'IndexController@article');
-    $router->get('products/{category?}', 'IndexController@products');
-    $router->get('producte/{id}', 'IndexController@product');
-    $router->get('jobs/{category?}', 'IndexController@jobs');
-    $router->get('job/{id}', 'IndexController@job');
-    $router->get('pages/{category?}', 'IndexController@page');
-});
-
 
 Route::group([
     'prefix'        => 'api',
